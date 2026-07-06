@@ -77,7 +77,26 @@ export const rooms = [
       ja: "80㎡の3LDK戸建て一棟貸切。3つの独立した寝室とリビングを備え、最大10名様でご利用いただけます。大久保駅から徒歩10分、東中野駅から徒歩7分の好立地。新宿観光・グループ旅行の拠点に最適です。",
       en: "Entire 80㎡ 3LDK house. Three separate bedrooms and a living room, accommodating up to 10 guests. 10 min from Okubo Station, 7 min from Higashi-Nakano Station.",
     },
-    images: [],
+    images: [
+    "/images/photo-01.jpg",
+    "/images/photo-02.png",
+    "/images/photo-03.png",
+    "/images/photo-04.png",
+    "/images/photo-05.png",
+    "/images/photo-06.png",
+    "/images/photo-07.png",
+    "/images/photo-08.png",
+    "/images/photo-09.jpg",
+    "/images/photo-10.jpg",
+    "/images/photo-11.jpg",
+    "/images/photo-12.jpg",
+    "/images/photo-13.jpg",
+    "/images/photo-14.jpg",
+    "/images/photo-15.jpg",
+    "/images/photo-16.jpg",
+    "/images/photo-17.jpg",
+    "/images/photo-18.jpg"
+  ],
   },
 ];
 
