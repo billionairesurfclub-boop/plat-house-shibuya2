@@ -9,6 +9,9 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
+  verification: {
+    google: "gXHCgYW1liWYzDHLdMnZqsms3IllJliPGWeecgZRK5E",
+  },
   title: "ぷらっとハウス渋谷Ⅱ | 渋谷駅徒歩10分 50㎡戸建て 最大5名 民泊",
   description:
     "渋谷駅（JR・東急・東京メトロ）徒歩10分。50㎡の戸建て一棟貸切・最大5名。Netflix・キッチン・浴槽・ソファーベッド完備。渋谷観光・グループ旅行に最適。",
