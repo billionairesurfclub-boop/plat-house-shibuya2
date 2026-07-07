@@ -12,7 +12,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
           <div>
             <p className="text-xs text-gray-500">Plat House</p>
-            <h1 className="text-lg font-bold text-gray-900">北新宿</h1>
+            <h1 className="text-lg font-bold text-gray-900">渋谷Ⅱ</h1>
           </div>
           <nav className="hidden md:flex gap-6 text-sm text-gray-600">
             <a href="#rooms" className="hover:text-gray-900">客室</a>
@@ -29,10 +29,10 @@ export default function Home() {
       <main>
         <section className="bg-gray-50 py-20 px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-sm text-gray-500 mb-3">Kitashinjuku · Tokyo</p>
+            <p className="text-sm text-gray-500 mb-3">Shibuya · Tokyo</p>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-6">{hotel.catchcopy.ja}</h2>
-            <p className="text-gray-600 text-lg mb-4">大久保駅（JR総武線）徒歩10分・東中野駅徒歩7分。80㎡の3LDK戸建て一棟貸切・最大10名の民泊。</p>
-            <p className="text-gray-500 text-base mb-8">Netflix・Nintendo Switch・キッチン・浴槽・ソファーベッド完備。新宿観光・グループ旅行の拠点に最適。</p>
+            <p className="text-gray-600 text-lg mb-4">渋谷駅（JR・東急・東京メトロ各線）徒歩10分。50㎡の戸建て一棟貸切・最大5名の民泊。</p>
+            <p className="text-gray-500 text-base mb-8">Netflix・Nintendo Switch・キッチン・浴槽・ソファーベッド完備。渋谷観光・グループ旅行の拠点に最適。</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a href="#booking" className="bg-gray-900 text-white px-8 py-3 rounded-full text-base font-medium hover:bg-gray-700 transition">今すぐ予約する</a>
               <a href="#rooms" className="border border-gray-300 text-gray-700 px-8 py-3 rounded-full text-base hover:bg-gray-50 transition">客室を見る</a>
@@ -43,10 +43,10 @@ export default function Home() {
 
         <section className="py-10 px-4 bg-white border-b border-gray-100">
           <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-            <div className="p-4"><p className="text-3xl font-bold text-gray-900">80㎡</p><p className="text-sm text-gray-500 mt-1">3LDK戸建て一棟貸切</p></div>
-            <div className="p-4"><p className="text-3xl font-bold text-gray-900">最大10名</p><p className="text-sm text-gray-500 mt-1">グループ利用OK</p></div>
-            <div className="p-4"><p className="text-3xl font-bold text-gray-900">徒歩10分</p><p className="text-sm text-gray-500 mt-1">大久保駅</p></div>
-            <div className="p-4"><p className="text-3xl font-bold text-gray-900">新宿近郊</p><p className="text-sm text-gray-500 mt-1">観光拠点に最適</p></div>
+            <div className="p-4"><p className="text-3xl font-bold text-gray-900">50㎡</p><p className="text-sm text-gray-500 mt-1">戸建て一棟貸切</p></div>
+            <div className="p-4"><p className="text-3xl font-bold text-gray-900">最大5名</p><p className="text-sm text-gray-500 mt-1">グループ利用OK</p></div>
+            <div className="p-4"><p className="text-3xl font-bold text-gray-900">徒歩10分</p><p className="text-sm text-gray-500 mt-1">渋谷駅</p></div>
+            <div className="p-4"><p className="text-3xl font-bold text-gray-900">渋谷</p><p className="text-sm text-gray-500 mt-1">繁華街すぐ</p></div>
           </div>
         </section>
 
@@ -67,7 +67,7 @@ export default function Home() {
         <section id="rooms" className="py-14 px-4 bg-gray-50">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold text-center text-gray-900 mb-2">客室タイプ</h2>
-            <p className="text-center text-gray-500 mb-10">80㎡の3LDK戸建て一棟貸切。3寝室＋リビング構成で最大10名。</p>
+            <p className="text-center text-gray-500 mb-10">50㎡の戸建て一棟貸切。寝室＋リビング構成で最大5名。</p>
             <div className="grid md:grid-cols-2 gap-6">
               {rooms.map((room) => (
                 <div key={room.id} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
@@ -96,26 +96,6 @@ export default function Home() {
           </div>
         </section>
 
-
-        {rooms[0]?.images?.length > 0 && (
-          <section id="gallery" className="py-14 px-4 bg-gray-50">
-            <div className="max-w-5xl mx-auto">
-              <h2 className="text-2xl font-bold text-center text-gray-900 mb-10">施設ギャラリー</h2>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                {rooms[0].images.map((src, i) => (
-                  <div key={i} className="aspect-[4/3] overflow-hidden rounded-2xl bg-gray-200">
-                    <img
-                      src={src}
-                      alt={`施設写真 ${i + 1}`}
-                      className="w-full h-full object-cover hover:scale-105 transition duration-300"
-                      loading={i < 6 ? "eager" : "lazy"}
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
         <section id="access" className="py-14 px-4 bg-gray-50">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-2xl font-bold text-center text-gray-900 mb-10">アクセス</h2>
@@ -141,7 +121,7 @@ export default function Home() {
           <section className="py-14 px-4 bg-white">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-2xl font-bold text-center text-gray-900 mb-2">旅行・観光ガイド</h2>
-              <p className="text-center text-gray-500 mb-10">北新宿・大久保エリアの最新情報</p>
+              <p className="text-center text-gray-500 mb-10">渋谷エリアの最新情報</p>
               <div className="grid md:grid-cols-3 gap-6 mb-8">
                 {latestPosts.map((post) => (
                   <Link key={post.slug} href={`/blog/${post.slug}`}>
@@ -178,13 +158,13 @@ export default function Home() {
 
         <section id="booking" className="py-20 px-4 bg-gray-900 text-white">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-2xl font-bold mb-3">大久保駅10分。80㎡3LDK戸建て一棟貸切・最大10名で新宿エリアを満喫</h2>
+            <h2 className="text-2xl font-bold mb-3">渋谷駅10分。50㎡戸建て一棟貸切・最大5名で渋谷を満喫</h2>
             <p className="text-gray-400 mb-2">OTAより安い公式直接予約 · 最安値保証 · 7日前まで無料キャンセル</p>
             <p className="text-gray-500 text-sm mb-8">チェックイン {hotel.checkIn} · チェックアウト {hotel.checkOut} · {hotel.cancelPolicy}</p>
             <div className="bg-gray-800 rounded-2xl p-6 mb-6">
               <p className="text-3xl font-bold mb-1">¥{hotel.price.min.toLocaleString()}〜</p>
               <p className="text-gray-400 text-sm">1泊あたり（税込）+ 清掃費別途</p>
-              <p className="text-gray-500 text-xs mt-2">一棟貸切 · 最大10名</p>
+              <p className="text-gray-500 text-xs mt-2">一棟貸切 · 最大5名</p>
             </div>
             <a href={hotel.bookingUrl} target="_blank" className="inline-block bg-white text-gray-900 px-10 py-4 rounded-full text-base font-bold hover:bg-gray-100 transition">今すぐ最安値で予約する</a>
           </div>
