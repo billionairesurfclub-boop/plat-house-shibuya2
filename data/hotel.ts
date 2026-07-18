@@ -76,7 +76,7 @@ export const rooms = [
       ja: "50㎡の戸建て一棟貸切。寝室にシングル布団2組、リビングにクイーンベッドとソファーベッドを備え、最大5名様でご利用いただけます。渋谷駅から徒歩10分の好立地。",
       en: "Entire 50㎡ house. Bedroom with 2 single futons, living room with queen bed and sofa bed. Accommodates up to 5 guests. 10 min walk from Shibuya Station.",
     },
-    images: [],
+    images: ["room-a-1.png", "bedroom2-1.png", "living-1.jpg", "plumbing-1.jpg", "amenity-1.jpg", "amenity-2.jpg", "amenity-3.jpg"],
   },
 ];
 
